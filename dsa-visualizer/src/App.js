@@ -1,17 +1,15 @@
-// App.js
 import React from 'react';
 import './App.css';
 import MainComponent from './MainComponent';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Routes>
-        {/* <Route path='/*' element={<MainComponent />} /> */}
-        <Route path='/*' element={<MainComponent />} />
+        <Route path="*" element={<MainComponent />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
